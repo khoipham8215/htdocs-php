@@ -1,0 +1,37 @@
+<style> 
+	.tkq{
+		margin:0;
+		border-style:solid;
+		border-color:#045FB4;
+		border-width:1px;
+		font-family:arial;
+		font-size:0.8em;
+		
+	}
+	.ttr th{
+		background-color:#045FB4;
+		font-family:arial;
+		font-size:1.4em;
+		color:white;
+		height:30px;
+		padding:5px;
+	}
+	.ttd td{
+		margin:0;
+		border-width:1px;
+		border-style:solid;
+		border-color:#848484;
+		font-family:helvetica;
+		font-size:1.2em;
+		color:black;
+		padding:2px;
+	}
+	.ttd{
+		margin:0;
+	}
+	.dkq{
+		margin-top:40px;
+		padding:5px;
+		background-color:#E6E6E6;
+	}
+</style>

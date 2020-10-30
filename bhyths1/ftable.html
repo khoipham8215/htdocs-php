@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> filter table</title>
+  <meta charset="utf-8">
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+}
+.container {
+  width: 500px;
+  margin: auto;
+}
+ 
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+ 
+#myTable {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+ 
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+ 
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+ 
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <h2>Freetuts.net hướng dẫn tạo Filter Table</h2>
+ 
+  <input type="text" id="myInput" placeholder="Search for Club.." title="Type in a name of Club" onchange="myFunction()">
+ 
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Club</th>
+      <th style="width:40%;">Country</th>
+    </tr>
+    <tr>
+      <td>Arsenal</td>
+      <td>England</td>
+    </tr>
+    <tr>
+      <td>Atletico Madrid</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Barcelona</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Liverpool</td>
+      <td>England</td>
+    </tr>
+    <tr>
+      <td>Real Madrid</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <td>Bayern Munich</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Borussia Dortmund</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Paris Saint-Germain</td>
+      <td>France</td>
+    </tr>
+    <tr>
+      <td>Manchester United</td>
+      <td>England</td>
+    </tr>
+    <tr>
+      <td>Monaco</td>
+      <td>France</td>
+    </tr>
+  </table>
+</div>
+<script language="javascript">
+  // lấy thẻ input
+  var input = document.getElementById("myInput");
+  // định nghĩa hàm xử lý myFunction
+  function myFunction() {
+    var filter, table, tr, td, i;
+    // lấy giá trị người dùng nhập
+    filter = input.value.toUpperCase();
+    //alert(filter);
+    // lấy phần bảng hiển thị kết quả
+    table = document.getElementById("myTable");
+    // lấy tất cả các thẻ tr
+    tr = table.getElementsByTagName("tr");
+ 
+    //Nếu filter không có giá trị ẩn các kết quả
+    if (!filter) {
+      table.style.display = "table";
+    }else{
+      // lặp qua tất cả các thẻ tr
+      for (i = 0; i < tr.length; i++) {
+        // lấy giá trị của thẻ td đầu tiên đại diện cho tên club
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          // kiểm tra giá trị filter có tồn tại trong thẻ tr không
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            //nếu có hiển thị chúng
+            table.style.display = "table";
+            tr[i].style.display = "block";
+          } else {
+            // nếu không ẩn chúng
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+  }
+  //gán sự kiện cho thẻ input
+  input.addEventListener("keyup", myFunction);
+</script>
+</body>
+</html>

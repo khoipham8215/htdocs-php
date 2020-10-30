@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.navbar{
+	background-color: rgb(20,125,193,0.8) !important;
+}
+.navbar li a{
+	color: white !important;
+}
+.navbar li a:hover{
+	background-color: rgb(194,22,28) !important;
+}
+.carousel-inner img{
+	width: 50%;
+}
+.carousel-inner{
+	text-align: center;
+}
+.carousel-caption h1{
+	font-size: 400%;
+	text-transform: uppercase;
+	text-shadow: 5px 5px 15px #000;
+}
+.carousel-caption h3{
+	font-size: 200%;
+	text-shadow: 2px 2px 10px #000;
+}
+#navbarResponsive{
+	background-color: rgb(20,125,193,0) !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.foot{
+	background-color: rgb(7,128,211,0.7) !important;
+	font-family: 'Roboto:wght@100' !important;
+	color: rgb(59,138,201);
+}
+#foot img{
+	width: 150px !important;
+}
+#foot{
+	position: fixed;
+	bottom: 0px;
+}
